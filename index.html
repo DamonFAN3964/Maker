@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <title>2023113964 范宇</title>
+    <style>
+        body {
+            font-family: 'Comic Neue', cursive, sans-serif;
+            margin: 20px;
+            background-color: #F5F0DC;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        .week-container {
+            max-width: 900px; 
+            margin: 0 auto;
+        }
+        /* --- 卡片样式 --- */
+        .week-card {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: box-shadow 0.2s;
+        }
+        .week-card:hover {
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        .week-card h2 {
+            margin-top: 0;
+            color: #3498db;
+            display: inline-block;
+        }
+        .summary {
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+        .indicator {
+            float: right;
+            font-size: 1.5em;
+            color: #3498db;
+            transition: transform 0.3s;
+        }
+        .week-card.active .indicator {
+            transform: rotate(90deg);
+        }
+        
+        /* --- 详细内容样式 --- */
+        .detail-content {
+            border-top: 2px dashed #eee;
+            margin-top: 15px;
+            padding-top: 15px;
+            line-height: 1.6;
+            display: none; /* 默认隐藏 */
+            animation: fadeIn 0.5s;
+        }
+        .detail-content h3 {
+            color: #e67e22;
+            margin-top: 20px;
+            border-left: 4px solid #f39c12;
+            padding-left: 8px;
+        }
+        
+        /* 图片/视频容器样式 */
+        .media-container {
+            margin: 15px 0;
+            text-align: center;
+        }
+        .media-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .media-container iframe {
+            max-width: 100%;
+        }
+        
+        /* 代码块样式 */
+        pre {
+            background-color: #272822; /* 深色背景，更像代码编辑器 */
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto; /* 确保长代码可以横向滚动 */
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+        code {
+            font-family: 'Consolas', 'Monaco', monospace;
+        }
+
+        /* 表格样式 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #ecf0f1;
+            color: #2c3e50;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>从代码到实物————2023113964范宇</h1>
+
+    <div class="week-container">
+        
+        <div class="week-card" onclick="toggleDetail('week2')">
+            <h2>第 2 周</h2>
+            <span class="indicator">></span>
+            <p class="summary">上课日期：2025年9月15日 | 重点：学习创建git仓库、制作简单的静态网站。</p>
+            
+            <div id="week2" class="detail-content">
+                
+                <h3>项目概览</h3>
+                <table>
+                    <tr>
+                        <th>事项</th>
+                        <th>状态</th>
+                        <th>备注</th>
+                    </tr>
+                    <tr>
+                        <td>Git 仓库建立</td>
+                        <td>✅ 完成</td>
+                        <td>基础 README 文档已提交。</td>
+                    </tr>
+                    <tr>
+                        <td>学习git基本操作</td>
+                        <td>✅ 完成</td>
+                        <td>理解branch的概念。</td>
+                    </tr>
+                    <tr>
+                        <td>制作个人的静态log网站</td>
+                        <td>⌛ 进行中</td>
+                        <td>学习了元素、属性、标签基本概念。</td>
+                    </tr>
+                </table>
+                
+            </div>
+
+        </div>
+
+        <div class="week-card" onclick="toggleDetail('week3')">
+            <h2>第 3 周</h2>
+            <span class="indicator">></span>
+            <p class="summary">上课日期：2025年9月22日 | 重点：学习简单的三维建模和3D打印。</p>
+            
+            <div id="week3" class="detail-content">
+                
+                <h3>项目概览</h3>
+                <table>
+                    <tr>
+                        <th>事项</th>
+                        <th>状态</th>
+                        <th>备注</th>
+                    </tr>
+                    <tr>
+                        <td>学会使用开源的solvespace软件</td>
+                        <td>✅ 完成</td>
+                        <td>制作了一个象棋。</td>
+                    </tr>
+                    <tr>
+                        <td>跟着李老师了解了bambu3D打印的流程</td>
+                        <td>✅ 完成</td>
+                        <td>X9318的3D打印机。</td>
+                    </tr>
+                    <tr>
+                        <td>用3D打印把象棋打出来。</td>
+                        <td>❌ 未完成</td>
+                        <td>人太多没来得及用。</td>
+                    </tr>
+                </table>
+
+                <h3>象棋建模图</h3>
+                <p>使用solvespace做的象棋。</p>
+                <div class="media-container">
+                    <img 
+                        src="./photos/week3.png" 
+                        alt="象棋建模图" 
+                        title="点击查看大图"
+                    >
+                </div>
+                
+            </div>
+
+        </div>
+        <div class="week-card" onclick="toggleDetail('week4')">
+            <h2>第 4 周（补休国庆）</h2>
+            <span class="indicator">></span>
+            <p class="summary">上课日期：2025年9月28日 | 重点：学习SolidWorks专业建模软件。</p>
+            
+            <div id="week4" class="detail-content">
+                
+                <h3>项目概览</h3>
+                <table>
+                    <tr>
+                        <th>事项</th>
+                        <th>状态</th>
+                        <th>备注</th>
+                    </tr>
+                    <tr>
+                        <td>学会3D建模软件SolidWorks的各种操作。</td>
+                        <td>✅ 完成</td>
+                        <td>虽然学了一遍但还是有些生疏需要多练。</td>
+                    </tr>
+                </table>
+                
+            </div>
+
+        </div>
+        <div class="week-card" onclick="toggleDetail('week5')">
+            <h2>第 5 周</h2>
+            <span class="indicator">></span>
+            <p class="summary">上课日期：2025年9月30日 | 重点：根据上节课的SW知识制作一个中秋主题的物件并3D打印。</p>
+            
+            <div id="week5" class="detail-content">
+                
+                <h3>项目概览</h3>
+                <table>
+                    <tr>
+                        <th>事项</th>
+                        <th>状态</th>
+                        <th>备注</th>
+                    </tr>
+                    <tr>
+                        <td>用SolidWorks建模一个中秋主体物件。</td>
+                        <td>✅ 完成</td>
+                        <td>反复重试出错，操作还是不熟练。</td>
+                    </tr>
+                    <tr>
+                        <td>把物件3D打印出来。</td>
+                        <td>✅ 完成</td>
+                        <td>电脑没电了，预计国庆期间完成。</td>
+                    </tr>
+                </table>
+                <h3>10月6日，用SW做的中秋主题物件</h3>
+                <p>月饼正面</p>
+                <div class="media-container">
+                    <img 
+                        src="./photos/moon1.png" 
+                        alt="月饼正面图" 
+                        title="点击查看大图"
+                    >
+                </div>
+                <h3>10月6日，用SW做的中秋主题物件</h3>
+                <p>月饼背面</p>
+                <div class="media-container">
+                    <img 
+                        src="./photos/moon2.png" 
+                        alt="月饼背面图" 
+                        title="点击查看大图"
+                    >
+                </div>
+                <h3>月饼打印过程(视频)</h3>
+                <p>使用bambu A1 mini打印过程：</p>
+                <div class="media-container">
+                    <iframe 
+                        width="100%" 
+                        height="315" 
+                        src="./videos/moon3.mp4" 
+                        title="Moon Video" 
+                        frameborder="0" 
+                        allowfullscreen
+                    ></iframe>   
+                </div>           
+                <h3>10月7日，3D打印成品，大功告成！</h3>
+                <p>月饼</p>
+                <div class="media-container">
+                    <img 
+                        src="./photos/moon4.jpg" 
+                        alt="月饼图" 
+                        title="点击查看大图"
+                    >
+                </div>
+                <h3>10月7日，顺便利用资源打印了两个bambu studio中的labubu</h3>
+                <p>两个labubu</p>
+                <div class="media-container">
+                    <img 
+                        src="labubu.jpg" 
+                        alt="labubu图" 
+                        title="点击查看大图"
+                    >
+                </div>
+                <h3>总结：这两堂课让我体验了从建模开始到实物打印出来的全过程。（SolidWorks确实有点难用啊！）</h3>
+            </div>
+
+        </div>
+    </div>
+
+        
+
+ 
+
+
+
+
+
+
+
+
+
+    <script>
+        function toggleDetail(detailId) {
+            var detail = document.getElementById(detailId);
+            var card = detail.parentElement;
+            
+            // 切换显示状态
+            if (detail.style.display === "block") {
+                detail.style.display = "none";
+                card.classList.remove('active');
+            } else {
+                detail.style.display = "block";
+                card.classList.add('active');
+            }
+        }
+    </script>
+
+</body>
+</html>
