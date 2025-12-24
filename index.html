@@ -308,13 +308,12 @@
 
         </div>
 
-    </div>
-         <div class="week-card" onclick="toggleDetail('week5')">
+         <div class="week-card" onclick="toggleDetail('week6')">
             <h2>第 6 周</h2>
             <span class="indicator">></span>
             <p class="summary">上课日期：2025年10月14日 | 重点：学习焊接。</p>
             
-            <div id="week5" class="detail-content">
+            <div id="week6" class="detail-content">
                 
                 <h3>项目概览</h3>
                 <table>
@@ -338,15 +337,325 @@
                 <p>课堂上的焊接技巧</p>
                 <div class="media-container">
                     <img 
-                        src="https://damonfan3964.github.io/Maker/photos/moon1.png" 
-                        alt="月饼正面图" 
+                        src="https://damonfan3964.github.io/Maker/photos/hanjie1.png" 
+                        alt="焊接技巧1" 
                         title="点击查看大图"
                     >
                 </div>
-                <h3>总结：这两堂课让我体验了从建模开始到实物打印出来的全过程。（SolidWorks确实有点难用啊！）</h3>
+                <div class="media-container">
+                    <img 
+                        src="https://damonfan3964.github.io/Maker/photos/hanjie2.jpg" 
+                        alt="焊接技巧2" 
+                        title="点击查看大图"
+                    >
+                </div>
+                <p>焊接练习</p>
+                <div class="media-container">
+                    <img 
+                        src="https://damonfan3964.github.io/Maker/photos/hanjie3.png" 
+                        alt="焊接练习" 
+                        title="点击查看大图"
+                    >
+                </div>
+                <h3>总结：虽然作为通信的学生已经掌握了焊接技术，但是在这堂课中还是收获很大。</h3>
             </div>
 
         </div>
+        <div class="week-card" onclick="toggleDetail('week7')">
+            <h2>第 7 周</h2>
+            <span class="indicator">></span>
+            <p class="summary">上课日期：2025年10月21日 | 重点：领取元器件进行嵌入式练习。</p>
+            
+            <div id="week7" class="detail-content">
+                
+                <h3>项目概览</h3>
+                <table>
+                    <tr>
+                        <th>事项</th>
+                        <th>状态</th>
+                        <th>备注</th>
+                    </tr>
+                    <tr>
+                        <td>在Arduino中配置esp32库。</td>
+                        <td>✅ 完成</td>
+                        <td>在Arduino中编译有点慢</td>
+                    </tr>
+                </table>
+                <h3>10月21日，在课堂上领完元器件后根据李君老师在B站上的视频逐步实现esp32-s2 mini的一个个小项目</h3>
+                <p>课堂上领取的元器件</p>
+                <div class="media-container">
+                    <img 
+                        src="https://damonfan3964.github.io/Maker/photos/embed.jpg" 
+                        alt="元器件" 
+                        title="点击查看大图"
+                    >
+                </div>
+                <h3>总结：一开始拿到的板子焊接地方是坏的导致接口断路，后来自己又重新焊接了一遍。</h3>
+            </div>
+        </div>
+
+        <div class="week-card" onclick="toggleDetail('week8')">
+            <h2>第 8、9 周</h2>
+            <span class="indicator">></span>
+            <p class="summary">上课日期：2025年10月28日、11月4日 | 重点：继续嵌入式练习。</p>
+            
+            <div id="week8" class="detail-content">
+                
+                <h3>项目概览</h3>
+                <table>
+                    <tr>
+                        <th>事项</th>
+                        <th>状态</th>
+                        <th>备注</th>
+                    </tr>
+                    <tr>
+                        <td>完成所有嵌入式练习。</td>
+                        <td>✅ 完成</td>
+                        <td>反复巩固。</td>
+                    </tr>
+                       <tr>
+                        <td>11月4日中期项目启动。</td>
+                        <td>✅ 完成</td>
+                        <td>构思。</td>
+                    </tr>
+
+                </table>
+                <h3>10月28日，继续在课堂上进行最后的舵机和WIFI两个练习</h3>
+                <h3>总结：虽然之前做过stm32和esp32-s3的项目，但还是在舵机那里卡了一会儿。总之最终顺利完成了，不得不感叹esp32的wifi真的很强大！</h3>
+            </div>
+
+        </div>
+        <div class="week-card" onclick="toggleDetail('week10')">
+            <h2>第 10 周</h2>
+            <span class="indicator">></span>
+            <p class="summary">上课日期：2025年11月11日 | 重点：做期中项目。</p>
+            
+            <div id="week10" class="detail-content">
+                
+                <h3>项目概览</h3>
+                <table>
+                    <tr>
+                        <th>事项</th>
+                        <th>状态</th>
+                        <th>备注</th>
+                    </tr>
+                    <tr>
+                        <td>搭建电路并串口调试。</td>
+                        <td>✅ 完成</td>
+                        <td>遇到光敏电阻串口无读数的问题。</td>
+                    </tr>
+                    <tr>
+                        <td>找到问题并最终完成中期项目。</td>
+                        <td>✅ 完成</td>
+                        <td></td>
+                    </tr>
+                </table>
+                <h3>11月11日，根据李君老师说的尽量使用发的元器件，我就想怎么能在有限条件下做出一个中期项目，我最后想的是一个光照感应系统。就是
+                    利用老师上课讲的舵机、PWM呼吸灯、WIFI等知识融合，根据光敏电阻读取亮暗自动调节LED灯的亮暗和舵机的旋转角度，并把结果通过WIFI传到网页上。
+                </h3>
+                <p>中期项目实物</p>
+                <div class="media-container">
+                    <img 
+                        src="https://damonfan3964.github.io/Maker/photos/qizhong.jpg" 
+                        alt="期中项目" 
+                        title="点击查看大图"
+                    >
+                </div>
+
+                <h3>总结：反复调试的过程是有趣的，最后反反复复找错发现是光敏电阻接线有问题。还有一个可惜之处是当时忘记录视频就拆掉了中期项目。</h3>
+            </div>
+
+        </div>
+         <div class="week-card" onclick="toggleDetail('week11')">
+            <h2>第 11 周</h2>
+            <span class="indicator">></span>
+            <p class="summary">上课日期：2025年11月18日 | 重点：PCB绘制。</p>
+            
+            <div id="week11" class="detail-content">
+                
+                <h3>项目概览</h3>
+                <table>
+                    <tr>
+                        <th>事项</th>
+                        <th>状态</th>
+                        <th>备注</th>
+                    </tr>
+                    <tr>
+                        <td>认识嘉立创元器件标识（贴片与直插的区别）</td>
+                        <td>✅ 完成</td>
+                        <td>之前都没有注意。</td>
+                    </tr>
+                    <tr>
+                        <td>画拓展板原理图和PCB走线。</td>
+                        <td>✅ 完成</td>
+                        <td></td>
+                    </tr>
+                </table>
+                <h3>11月18日，谢敏老师讲述了PCB绘制的知识，讲的很细致。
+                </h3>
+                <p>PCB原理图</p>
+                <div class="media-container">
+                    <img 
+                        src="https://damonfan3964.github.io/Maker/photos/PCB1.png" 
+                        alt="原理图" 
+                        title="点击查看大图"
+                    >
+                </div>
+                <p>PCB</p>
+                <div class="media-container">
+                    <img 
+                        src="https://damonfan3964.github.io/Maker/photos/PCB2.png" 
+                        alt="PCB" 
+                        title="点击查看大图"
+                    >
+                </div>
+
+                <h3>总结：最后虽然没有做完，但是整个流程都熟悉了，下来再学习下，期末项目能用到。</h3>
+            </div>
+
+        </div>
+         <div class="week-card" onclick="toggleDetail('week12')">
+            <h2>第 12 周</h2>
+            <span class="indicator">></span>
+            <p class="summary">上课日期：2025年11月25日 | 重点：期中项目展示。</p>
+            
+            <div id="week12" class="detail-content">
+                
+                <h3>11月25日，看其他各种不同专业的同学做的期中项目，有些真的很有亮点。
+                </h3>
+                <p>一组同学做的自动开关</p>
+                <div class="media-container">
+                    <img 
+                        src="https://damonfan3964.github.io/Maker/photos/qizhong1.jpg" 
+                        alt="原理图" 
+                        title="点击查看大图"
+                    >
+                </div>
+
+                <h3>总结：这一次期中展示收获很大，让我印象最深刻的是一个建筑学院张俊杰同学利用一个舵机做的船桨。因为我转专业前也是建筑学的，
+                    所以很有感同身受，他把在建筑结构中学到的传动杠杆原理利用3D打印实现了，并让舵机驱动，这种融合很有意思。（但可惜忘拍照了）。
+                </h3>
+            </div>
+
+        </div>
+         <div class="week-card" onclick="toggleDetail('week13')">
+            <h2>第 13 周</h2>
+            <span class="indicator">></span>
+            <p class="summary">上课日期：2025年12月2日 | 重点：李然老师讲产品设计。</p>
+            
+            <div id="week13" class="detail-content">
+                
+                <h3>12月2日，设计学院李老师来讲述产品设计与设计思维，很有趣。
+            
+                <h3>总结：这堂课我印象最深的就是李老师讲的智能产品是真正的去服务顺应人的需求而非改变人。当然，放的一个日本的广告也印象深刻，向我们展示了
+                    生活中的智能产品只要想到就能做到。
+                </h3>
+            </div>
+
+        </div>
+         <div class="week-card" onclick="toggleDetail('week14')">
+            <h2>第 14、15 周</h2>
+            <span class="indicator">></span>
+            <p class="summary">上课日期：2025年12月9日、12月14日 | 重点：期末项目制作以及集成电路学院Hackson。</p>
+            
+            <div id="week14" class="detail-content">
+                
+                <h3>14、15周由于自己的专业课嵌入式也有一个课程设计，所以我就将两个课程设计结合到了一起了
+                </h3>
+                <h3>本次的期末项目是做的智能加湿器，主要是可以通过手机控制的加湿器智能终端。根据嵌入式课的要求，我们使用了STM32F103C8T6和ESP32-S3的双芯片架构。
+                    STM32部分嵌入了华为的LiteOS系统，作为一个单独可放于房间任何地方的传感器系统（解决目前市场上传感器只安装在设备内，数据局部不准的痛点），我们通过
+                    蓝牙透传的方式将数据实时传给esp32。
+                </h3>
+                 <h3>esp32-s3部分（基于IDF和FREERTOS）接受数据后就受到wifi的用户控制（网页基于vue+fastapi），智能调节湿度。这次嵌入式项目利用到了大部分我们课中的知识，比如PCB、焊接、3D打印...
+                </h3>
+                <p>成品展示-web界面1</p>
+                <div class="media-container">
+                    <img 
+                        src="https://damonfan3964.github.io/Maker/photos/qimo1.jpg" 
+                        alt="成品展示" 
+                        title="点击查看大图"
+                    >
+                </div>
+                <p>成品展示-web界面2</p>
+                  <div class="media-container">
+                    <img 
+                        src="https://damonfan3964.github.io/Maker/photos/qimo2.jpg" 
+                        alt="成品展示" 
+                        title="点击查看大图"
+                    >
+                </div>
+                <p>成品展示-web界面3</p>
+                  <div class="media-container">
+                    <img 
+                        src="https://damonfan3964.github.io/Maker/photos/qimo4.jpg" 
+                        alt="成品展示" 
+                        title="点击查看大图"
+                    >
+                </div>
+                <p>成品展示-加湿器</p>
+                  <div class="media-container">
+                    <img 
+                        src="https://damonfan3964.github.io/Maker/photos/qimo.jpg" 
+                        alt="成品展示" 
+                        title="点击查看大图"
+                    >
+                </div>
+                <p>成品展示-ESP32</p>
+                  <div class="media-container">
+                    <img 
+                        src="https://damonfan3964.github.io/Maker/photos/qimo3.jpg" 
+                        alt="成品展示" 
+                        title="点击查看大图"
+                    >
+                </div>
+                <p>成品展示-STM32</p>
+                  <div class="media-container">
+                    <img 
+                        src="https://damonfan3964.github.io/Maker/photos/qimo5.jpg" 
+                        alt="成品展示" 
+                        title="点击查看大图"
+                    >
+                </div>
+                <p>成品展示-原理图</p>
+                  <div class="media-container">
+                    <img 
+                        src="https://damonfan3964.github.io/Maker/photos/qimo6.png" 
+                        alt="成品展示" 
+                        title="点击查看大图"
+                    >
+                </div>
+                <p>成品展示-PCB</p>
+                <div class="media-container">
+                    <img 
+                        src="https://damonfan3964.github.io/Maker/photos/qimo7.png" 
+                        alt="成品展示" 
+                        title="点击查看大图"
+                    >
+                </div>
+
+                <h3>效果视频</h3>
+                <div class="media-container">
+                    <iframe 
+                        width="100%" 
+                        height="315" 
+                        src="https://damonfan3964.github.io/Maker/videos/qimo.mp4" 
+                        title="qimo Video" 
+                        frameborder="0" 
+                        allowfullscreen
+                    ></iframe>   
+                </div>           
+
+                <h3>总结：这一次期末项目由于还尝试了AI语音识别和输出功能（虽然最后失败了），导致15周周三才完成，没有来的及参加Hackson和期末展示。
+                    但是在整个过程中确实磨练了很多技能，我们从零开始，完成了软硬件、Solidworks...的工作，很开心，不管结果如何，感受到了Maker的魅力所在。
+                </h3>
+            </div>
+
+        </div>
+
+
+
+
+
     </div>
 
         
