@@ -1,0 +1,12 @@
+idf_component_register(SRCS "main.c"
+                            "wifi_manager.c"
+                            "audio_player.c"
+                            "es8311.c"
+                            "http_client.c"
+                            "sr04.c"
+                            "humidifier.c"
+                            "ttp223.c"
+                            "ble_service.c"
+                    "st7789_display.c"
+                    INCLUDE_DIRS "."
+                    REQUIRES driver esp_http_client esp_wifi nvs_flash esp_timer bt esp_lcd json)

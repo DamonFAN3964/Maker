@@ -1,0 +1,103 @@
+menu "Audio Player Configuration"
+
+    config WIFI_SSID
+        string "WiFi SSID"
+        default "your_wifi_ssid"
+        help
+            SSID (network name) for the example to connect to.
+
+    config WIFI_PASSWORD
+        string "WiFi Password"
+        default "your_wifi_password"
+        help
+            WiFi password (WPA or WPA2) for the example to use.
+
+    config SERVER_URL
+        string "Audio Server URL"
+        default "http://your-server.com/audio/stream"
+        help
+            URL of the audio streaming server.
+
+    config AUDIO_SAMPLE_RATE
+        int "Audio Sample Rate"
+        default 44100
+        help
+            Audio sample rate in Hz (e.g., 44100, 48000).
+
+    config AUDIO_VOLUME
+        int "Default Audio Volume"
+        range 0 100
+        default 70
+        help
+            Default audio volume (0-100).
+
+endmenu
+
+menu "Cloud Reporting"
+
+    config CLOUD_API_LOAD_URL
+        string "Cloud API URL (/api/upload)"
+        default "http://101.126.138.110:8000/api/upload"
+        help
+            HTTP endpoint for uploading JSON: {\"temperature\":x,\"humidity\":y}
+
+    config CLOUD_REPORT_INTERVAL_MS
+        int "Report interval (ms)"
+        range 500 600000
+        default 60000
+        help
+            Interval between uploads when WiFi is connected.
+
+    config CLOUD_TIME_URL
+        string "Cloud time URL (/api/time)"
+        default "http://101.126.138.110:8000/api/time"
+        help
+            HTTP endpoint returning current date/time info.
+
+endmenu
+
+menu "MCU Commands"
+
+    config MCU_COMMANDS_ENABLE
+        bool "Enable command polling"
+        default y
+        help
+            When enabled, MCU periodically polls the cloud for pending commands.
+
+    config MCU_POWER_URL
+        string "Power URL (/api/mcu/power)"
+        default "http://101.126.138.110:8000/api/mcu/power"
+        depends on MCU_COMMANDS_ENABLE
+        help
+            Returns the latest unexecuted power command (on/off) and marks it executed.
+
+    config MCU_LEVEL_URL
+        string "Level URL (/api/mcu/level)"
+        default "http://101.126.138.110:8000/api/mcu/level"
+        depends on MCU_COMMANDS_ENABLE
+        help
+            Returns the latest unexecuted level command and marks it executed.
+
+    config MCU_SCHEDULE_URL
+        string "Schedule URL (/api/mcu/schedule)"
+        default "http://101.126.138.110:8000/api/mcu/schedule"
+        depends on MCU_COMMANDS_ENABLE
+        help
+            Returns schedule config and whether the device should run (polled continuously).
+
+    config MCU_COMMANDS_POLL_INTERVAL_MS
+        int "Poll interval (ms)"
+        range 200 600000
+        default 2000
+        depends on MCU_COMMANDS_ENABLE
+        help
+            Interval between polling requests when WiFi is connected.
+
+    config MCU_SCHEDULE_DURATION_MIN
+        int "Fallback timed duration (minutes)"
+        range 1 240
+        default 30
+        help
+            Used when schedule end time cannot be parsed; countdown falls back to this duration.
+
+endmenu
